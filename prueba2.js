@@ -18,4 +18,42 @@ Array.prototype.devuelve_diferentes = function(numero){
     }
     return array_arreglado;
 }
-console.log(elArray.devuelve_diferentes(11));
+//console.log(elArray.devuelve_diferentes(11));
+
+String.prototype.toArray = function(){
+    return this.split(' ')
+}
+
+
+//console.log(cadena.toArray());
+
+
+//try catch, para controlar errores
+try{
+//var prueba3 = 5/a;
+}
+catch(ex){
+    alert(ex)
+}
+//console.log(prueba3)
+
+
+
+//ejercicio
+
+Object.prototype.implementa = function(metodo){
+    console.log(this.hasOwnProperty(metodo) ? "Este objeto posee el método " + metodo : "Este objeto NO posee el método " + metodo);
+    
+    console.log("Término función implementa");
+}
+
+var objetazo = new Object();
+objetazo.devuelveTipo = function(){
+    console.log(this.valueOf);
+}
+
+objetazo.nombre = "Juanito";
+//objetazo.implementa("nombre");
+
+var parrafos = document.getElementsByTagName("p");
+console.log(parrafos[0].lastChild.textContent);
