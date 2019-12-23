@@ -10,12 +10,12 @@ function genera() {
     //hijos
     var antiguo_div1 = div1.firstChild;
     var antiguo_div2 = div2.firstChild;
+    var resultado = div3.firstChild;
+   
+    
     //nuevos parrafos
     var parrafo_div1 = document.createElement("p");
     var parrafo_div2 = document.createElement("p");
-    //ver parrafos antiguos
-    var antiguo_parrafo1 = document.createTextNode(parrafo_div1.firstChild);
-    var antiguo_parrafo2 = document.createTextNode(parrafo_div2.firstChild);
     //se crean los textos node
     var texto_div1 = document.createTextNode(numero1);
     var texto_div2 = document.createTextNode(numero2);
@@ -40,6 +40,9 @@ function genera() {
 
     div1.appendChild(parrafo_div1);
     div2.appendChild(parrafo_div2);
+    if(div3.firstChild != null){
+       div3.removeChild(resultado);
+    }
     //comprobar la función
     console.log(numero1 + "    " + numero2);
 }
