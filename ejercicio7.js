@@ -12,3 +12,9 @@ console.log("El total de enlaces que apuntan a http://prueba son " + numeroEnlac
 var parrafos =  document.getElementsByTagName("p");
 var tercerParrafo = parrafos[2].getElementsByTagName("a").length;
 console.log("Numero de enlaces del tercer párrafo " + tercerParrafo)
+var enlacesCorregidos = new Array();
+for (var i = 0; i < enlaces.length; i++){
+    console.log(enlaces[i].getAttribute("href"));
+    enlacesCorregidos.push(enlaces[i])
+}
+console.log("Enlaces arreglados " + enlacesCorregidos )
