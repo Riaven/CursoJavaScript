@@ -1,3 +1,18 @@
+"""from io import open 
+
+
+archivo_texto=open("archivo.txt", "w")
+frase="Estupendo dia para estudiar python  el miercoles"
+archivo_texto.write(frase)
+archivo_texto.close()
+"""
+#
+import sys;
+nombre = "SO español"
+print(sys.getsizeof(nombre))
+print(len(nombre))
+
+"""
 from random import randint
 from time import sleep
 
@@ -24,4 +39,4 @@ def make_tree():
   sleep(.75)
 
 while True:
-  make_tree()
+  make_tree()"""
