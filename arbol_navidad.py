@@ -5,14 +5,14 @@ archivo_texto=open("archivo.txt", "w")
 frase="Estupendo dia para estudiar python  el miercoles"
 archivo_texto.write(frase)
 archivo_texto.close()
-"""
+
 #
 import sys;
 nombre = "SO español"
 print(sys.getsizeof(nombre))
 print(len(nombre))
 
-"""
+
 from random import randint
 from time import sleep
 
@@ -40,3 +40,21 @@ def make_tree():
 
 while True:
   make_tree()"""
+
+
+
+
+# your code goes here
+def factorial(numero):
+  if(numero == 0 or numero == 1):
+    return 1
+  else:
+    return numero * factorial(numero-1)
+
+caso = int(input())
+
+while caso>0:
+    n=long(input()) 
+    m=long(input())
+    print(factorial(n)/((factorial(m))*(factorial(n-m))))
+    caso-=1
