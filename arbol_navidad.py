@@ -43,18 +43,38 @@ while True:
 
 
 
-
-# your code goes here
-def factorial(numero):
-  if(numero == 0 or numero == 1):
-    return 1
-  else:
-    return numero * factorial(numero-1)
-
-caso = int(input())
-
-while caso>0:
-    n=long(input()) 
-    m=long(input())
-    print(factorial(n)/((factorial(m))*(factorial(n-m))))
-    caso-=1
+mi = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+      'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+mys = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+       'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U','V', 'W', 'X', 'Y', 'Z']
+des = 1
+opcion = input("Elija una opcion \ne)Encriptar archivo\nd)Desencriptar archivo\n>>: ")
+if opcion == 'e':
+    nombre = input("Deme el nombre completo y extension del archvo a encriptar ")
+    na = open(nombre, 'r')
+    caracter = na.read(1)
+    cifrado = ""
+    while caracter != "":
+        if caracter in mi:
+            cifrado += mi[(mi.index(caracter) + des % (len(mi)))]
+        if caracter in mys:
+            cifrado += mys[(mys.index(caracter) + des % (len(mys)))]
+        else:
+            cifrado = caracter
+    print(cifrado)
+    caracter = na.read(1)
+elif opcion == "d":
+    nombre = input("Deme el nombre completo y extension del archvo a desencriptar ")
+    na = open(nombre, 'r')
+    car = na.read(1)
+    descifrado = ""
+    while car != "":
+        if car in mi:
+            descifrado += mi[(mi.index(car) - des % (len(mi)))]
+        if car in mys:
+            descifrado += mys[(mys.index(car) - des % (len(mys)))]
+        else:
+            descifrado = car
+    print(descifrado)
+    car = na.read(1)
+na.close()
